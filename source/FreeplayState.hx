@@ -5,6 +5,7 @@ import Discord.DiscordClient;
 #end
 import editors.ChartingState;
 import flash.text.TextField;
+import flixel.tweens.FlxEase;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.addons.display.FlxGridOverlay;
