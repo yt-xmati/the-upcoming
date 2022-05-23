@@ -149,10 +149,6 @@ class FreeplayState extends MusicBeatState
 		FlxTween.tween(scoreText,{y: 5},0.5,{ease: FlxEase.expoInOut});
 		FlxTween.tween(diffText,{y: 40},0.5,{ease: FlxEase.expoInOut});
 
-		changeSelection();
-		changeDiff();
-		
-
 
 		if(curSelected >= songs.length) curSelected = 0;
 		bg.color = songs[curSelected].color;
@@ -163,8 +159,12 @@ class FreeplayState extends MusicBeatState
 			lastDifficultyName = CoolUtil.defaultDifficulty;
 		}
 		curDifficulty = Math.round(Math.max(0, CoolUtil.defaultDifficulties.indexOf(lastDifficultyName)));
+		
+		changeSelection();
+		changeDiff();
 
 		var swag:Alphabet = new Alphabet(1, 0, "swag");
+		
 
 		// JUST DOIN THIS SHIT FOR TESTING!!!
 		/* 
